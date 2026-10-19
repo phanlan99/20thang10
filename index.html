@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Chúc emmm 20-10 vui vẻ nha 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Màn hình mở quà: cần 1 lần chạm để trình duyệt cho phép phát nhạc -->
+  <div class="gate" id="gate" role="button" tabindex="0" aria-label="Mở quà">
+    <div class="gate-heart">💝</div>
+    <p class="gate-text">Em ơi, nhấn vào đây nho</p>
+    <p class="gate-sub">Chạm để mở</p>
+  </div>
+
+  <!-- Nhạc nền -->
+  <audio id="bgm" src="chucmung.mp3" loop preload="auto"></audio>
+  <button class="music-btn" id="musicBtn" type="button" aria-label="Tắt nhạc" title="Tắt / bật nhạc">🎵</button>
+
+  <!-- Nền gradient hồng tỏa từ giữa -->
+  <div class="bg" aria-hidden="true"></div>
+
+  <!-- Vòng sóng lan tỏa từ tâm -->
+  <div class="ripples" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <main class="stage" id="stage">
+    <!-- Chữ 3D nằm phía sau bó hoa -->
+    <div class="title-wrap" id="titleWrap">
+      <h1 class="title" id="title" aria-label="Chúc emmm 20-10 vui vẻ nha">
+        <span class="line" data-text="Chúc emmm"></span>
+        <span class="line" data-text="20-10 vui vẻ nha"></span>
+      </h1>
+    </div>
+
+    <!-- Quầng sáng sau bó hoa -->
+    <div class="glow" aria-hidden="true"></div>
+
+    <!-- Bó hoa -->
+    <div class="bouquet-wrap" id="bouquetWrap">
+      <div class="bouquet-in">
+        <img class="bouquet" id="bouquet" src="bohoa.png" alt="Bó hoa tặng em">
+      </div>
+    </div>
+  </main>
+
+  <!-- Cánh hoa rơi, lấp lánh, tim -->
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <p class="hint" id="hint">Chạm vào màn hình để thả tim cho em nè 💗</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
